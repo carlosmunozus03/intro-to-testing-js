@@ -5,14 +5,9 @@ function helloWorld() {
 
 // sayHello function
 function sayHello(name) {
-    if (name === 'Jane') {
-        return 'Hello, ' + name;
-    } else if (name === 'Alex') {
-        return 'Hello, ' + name;
-    } else {
-        return 'Hello, ' + 'Pat';
-    }
+    return 'Hello, ' + name + '!';
 }
+
 // addOne function
 function addOne(input) {
     if (typeof input !== "number") {
@@ -20,4 +15,14 @@ function addOne(input) {
     } else {
         return input + 1;
     }
+}
+
+// isFive function
+function isFive(number) {
+    return number === 5;
+}
+
+// isEven function
+function isEven(input) {
+    return input % 2 === 0;
 }

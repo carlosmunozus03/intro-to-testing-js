@@ -20,18 +20,45 @@ describe('sayHello', function () {
     it('should return a string when caller', function () {
         expect(typeof sayHello()).toBe('string');
     });
-    it('should return Hello, Jane', function () {
-        expect(typeof sayHello("Jane")).toBe("Hello, Jane");
+    it('should return Hello, Jane!', function () {
+        expect(sayHello('Jane')).toBe('Hello, Jane!');
     });
-    it('should be return Hello, Alex', function () {
-        expect(typeof sayHello('Alex')).toBe('Hello, Alex')
+    it('should be return Hello, Alex!', function () {
+        expect(sayHello('Alex')).toBe('Hello, Alex!');
     });
-    it('should be return Hello, Pat', function () {
-        expect(typeof sayHello('Pat')).toBe('Hello Pat');
+    it('should be return Hello, Pat!', function () {
+        expect(sayHello('Pat')).toBe('Hello, Pat!');
     });
-})
-
-describe("addOne", function() {
+    it('should be return Hello, when do not passed an argument', function () {
+        expect(sayHello()).toBe('Hello, World!');
+    });
+    it('should be return Hello, World when the passed an argument true', function () {
+        expect(sayHello(true)).toBe('Hello, World!');
+    });
+    it('should be return Hello, World! when the passed an argument false', function () {
+        expect(sayHello(false)).toBe('Hello, World!');
+    });
+});
+describe('isFive', function() {
+    it('should be a defined function', function () {
+        expect(typeof isFive).toBe("function");
+    });
+    it('should be return a number when called', function () {
+        expect(typeof isFive()).toBe('number');
+    });
+    it('should be return 5 when passed a that number', function () {
+        expect(isFive(5)).toBe(5);
+    });
+});
+describe('isEven', function () {
+    it('should be a defined function', function () {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should be return a number when called', function () {
+        expect(typeof isEven()).toBe('number');
+    });
+});
+    describe("addOne", function() {
     it('should be a defined function', function() {
         expect(typeof addOne).toBe("function");
     });
