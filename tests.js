@@ -17,6 +17,18 @@ describe('sayHello', function () {
     it('should be a defined function', function() {
         expect(typeof sayHello).toBe('function');
     });
+    it('should return a string when caller', function () {
+        expect(typeof sayHello()).toBe('string');
+    });
+    it('should return Hello, Jane', function () {
+        expect(typeof sayHello("Jane")).toBe("Hello, Jane");
+    });
+    it('should be return Hello, Alex', function () {
+        expect(typeof sayHello('Alex')).toBe('Hello, Alex')
+    });
+    it('should be return Hello, Pat', function () {
+        expect(typeof sayHello('Pat')).toBe('Hello Pat');
+    });
 })
 
 describe("addOne", function() {
